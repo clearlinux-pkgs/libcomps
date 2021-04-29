@@ -4,7 +4,7 @@
 #
 Name     : libcomps
 Version  : 0.1.15
-Release  : 27
+Release  : 28
 URL      : https://github.com/rpm-software-management/libcomps/archive/libcomps-0.1.15/libcomps-0.1.15.tar.gz
 Source0  : https://github.com/rpm-software-management/libcomps/archive/libcomps-0.1.15/libcomps-0.1.15.tar.gz
 Summary  : Comps XML file manipulation library
@@ -88,10 +88,10 @@ export SOURCE_DATE_EPOCH=1585678343
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
+export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
+export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
+export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 %cmake .. -DPYTHON_DESIRED:STRING=3 -Wno-dev ../libcomps/
 make  %{?_smp_mflags}  VERBOSE=1
 popd
