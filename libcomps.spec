@@ -4,7 +4,7 @@
 #
 Name     : libcomps
 Version  : 0.1.18
-Release  : 36
+Release  : 37
 URL      : https://github.com/rpm-software-management/libcomps/archive/0.1.18/libcomps-0.1.18.tar.gz
 Source0  : https://github.com/rpm-software-management/libcomps/archive/0.1.18/libcomps-0.1.18.tar.gz
 Summary  : Comps XML file manipulation library
@@ -84,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631916028
+export SOURCE_DATE_EPOCH=1635748238
 pushd libcomps
 mkdir -p clr-build
 pushd clr-build
@@ -99,7 +99,7 @@ popd
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1631916028
+export SOURCE_DATE_EPOCH=1635748238
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libcomps
 cp %{_builddir}/libcomps-0.1.18/COPYING %{buildroot}/usr/share/package-licenses/libcomps/4cc77b90af91e615a64ae04893fdffa7939db84c
