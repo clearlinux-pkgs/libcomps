@@ -4,7 +4,7 @@
 #
 Name     : libcomps
 Version  : 0.1.19
-Release  : 39
+Release  : 40
 URL      : https://github.com/rpm-software-management/libcomps/archive/0.1.19/libcomps-0.1.19.tar.gz
 Source0  : https://github.com/rpm-software-management/libcomps/archive/0.1.19/libcomps-0.1.19.tar.gz
 Summary  : Comps XML file manipulation library
@@ -87,25 +87,25 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1662753677
+export SOURCE_DATE_EPOCH=1664934292
 pushd libcomps
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %cmake .. -Wno-dev
 make  %{?_smp_mflags}
 popd
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1662753677
+export SOURCE_DATE_EPOCH=1664934292
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libcomps
-cp %{_builddir}/libcomps-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libcomps/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/libcomps-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libcomps/4cc77b90af91e615a64ae04893fdffa7939db84c || :
 pushd libcomps
 pushd clr-build
 %make_install
