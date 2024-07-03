@@ -516,3 +516,11 @@ libcomps.so.0:comps_validate_rule_prop_check
 libcomps.so.0:digits_count
 libcomps.so.0:empty_xmlGenericErrorFunc
 libcomps.so.0:expand
+libcomps.so.0:expand0
+libcomps.so.0:expand1
+libcomps.so.0:expand2
+libcomps.so.0:expand3
+libcomps.so.0:expand4
+libcomps.so.0:expand5
+libcomps.so.0:expand_out
+libcomps.so.0:expand_s
